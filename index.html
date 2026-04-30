@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewMint - Coming Soon</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        @keyframes emoji-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-floating { animation: floating 6s ease-in-out infinite; }
+        .animate-floating-delayed { animation: floating 5s ease-in-out infinite; animation-delay: 1s; }
+        .animate-emoji { animation: emoji-float 4s ease-in-out infinite; }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ::-webkit-scrollbar { display: none; }
+        
+        .btn-shadow:hover {
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1c1c34',
+                        'accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen w-full flex items-center justify-center p-4 relative">
+    
+    <!-- Background Decorative Gradients -->
+    <div class="fixed inset-0 pointer-events-none -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-300/30 rounded-full blur-[120px]"></div>
+        <div class="absolute top-[2%] left-[2%] w-[30%] h-[30%] bg-pink-300/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-200/40 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Floating Background Shapes -->
+    <div class="fixed left-[15%] top-[60%] z-10 pointer-events-none animate-floating opacity-40">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+            <path d="M20 20C20 20 60 20 60 60C60 100 20 100 20 100" stroke="#4ade80" stroke-width="15" stroke-linecap="round" />
+        </svg>
+    </div>
+    <div class="fixed right-[15%] top-[65%] z-10 pointer-events-none animate-floating-delayed opacity-60">
+        <svg width="100" height="60" viewBox="0 0 100 60" fill="none">
+            <path d="M10 30Q25 10 40 30T70 30" stroke="#f59e0b" stroke-width="10" stroke-linecap="round" />
+        </svg>
+    </div>
+    <div class="fixed top-[10%] left-[5%] w-32 h-32 bg-purple-300/30 rounded-full blur-xl pointer-events-none"></div>
+
+    <!-- Main Container Card -->
+    <main id="main-content" class="animate-fade-in-up relative z-20 w-full max-w-5xl aspect-[16/10] min-h-[600px] bg-white rounded-[40px] shadow-2xl shadow-blue-900/5 flex flex-col items-center justify-between py-12 px-8 overflow-hidden">
+        
+        <!-- Header / Logo Pod -->
+        <div class="absolute top-[-2px] left-1/2 -translate-x-1/2 z-30">
+            <div class="bg-white px-8 py-3 rounded-b-3xl shadow-[0_4px_20px_-2px_rgba(59,130,246,0.15)] border-x border-b border-gray-50 flex items-center gap-2">
+                <div class="bg-blue-600 p-1.5 rounded-full">
+                    <i data-lucide="link" class="text-white w-3.5 h-3.5"></i>
+                </div>
+                <span class="text-gray-800 tracking-tight font-bold text-xl">ReviewMint</span>
+            </div>
+        </div>
+
+        <!-- Center Content -->
+        <div class="flex-1 flex flex-col items-center justify-center text-center space-y-6 max-w-2xl mt-12">
+            <!-- 3D Emoji Alternative -->
+            <div class="text-6xl drop-shadow-xl animate-emoji mb-4">👍</div>
+
+            <div class="space-y-3">
+                <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">We're Almost There</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-blue-600 tracking-tight">Cooking Our Website.</h1>
+            </div>
+
+            <div class="space-y-1">
+                <p class="text-gray-500 font-medium text-lg">Our team is putting the final touches on your next adventure companion.</p>
+                <p class="text-gray-500 font-medium text-lg">Stay Tune.</p>
+            </div>
+
+            <!-- Subscription Section -->
+            <div id="subscription-container" class="w-full max-w-sm pt-4 space-y-4">
+                <p class="text-xs text-blue-500/60 font-semibold tracking-wider uppercase mb-1 drop-shadow-sm">“Built by travelers, for travelers”</p>
+                
+                <form id="subscribe-form" class="relative group space-y-4">
+                    <div class="flex flex-col sm:flex-row items-center gap-3">
+                        <div class="relative flex-1 w-full">
+                            <input
+                                type="email"
+                                id="email-input"
+                                required
+                                placeholder="Enter your email"
+                                class="w-full bg-white/40 backdrop-blur-2xl border-2 border-gray-200/60 text-gray-800 rounded-full py-4 pl-14 pr-6 outline-none focus:ring-2 focus:ring-blue-400 focus:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all text-sm font-medium placeholder:text-gray-400"
+                            />
+                            <div class="absolute left-5 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-sm">
+                                <i data-lucide="mail" class="w-4 h-4 text-[#1c1c34]"></i>
+                            </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full sm:w-auto bg-[#1c1c34] text-white px-8 py-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 btn-shadow whitespace-nowrap shadow-lg flex-shrink-0"
+                        >
+                            Notify Me
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <p class="text-[10px] text-gray-400 font-medium italic opacity-70 mt-2">
+                        * We value your privacy. No spam, ever.
+                    </p>
+                </form>
+
+                <div id="success-message" class="hidden animate-fade-in-up bg-green-50 text-green-700 py-4 px-6 rounded-3xl font-bold flex items-center justify-center gap-2">
+                    🎉 You're on the list!
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="w-full flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-gray-100">
+            <div class="flex items-center gap-4 order-2 md:order-1">
+                <button class="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-400 hover:text-blue-600 hover:scale-110 transition-all">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                </button>
+                <button class="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-400 hover:text-pink-600 hover:scale-110 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </button>
+                <button class="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-400 hover:text-blue-600 hover:scale-110 transition-all">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end gap-2 order-1 md:order-2">
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-400 uppercase tracking-widest text-center">
+                    <a href="privacy.html" class="hover:text-blue-500 transition-colors">Privacy Policy</a>
+                    <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
+                    <a href="terms.html" class="hover:text-blue-500 transition-colors">Terms of Service</a>
+                </div>
+                <p class="text-[10px] text-gray-300 font-medium tracking-tight">
+                    © <span id="current-year"></span> ReviewMint. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Hidden iframe for Google Form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { showSuccess(); }"></iframe>
+
+    <!-- Bottom Right Blob -->
+    <div class="fixed bottom-[-50px] right-[-50px] w-48 h-48 bg-orange-400 rounded-full opacity-80 z-10 overflow-hidden pointer-events-none pulse-slow" style="animation: pulse-slow 4s ease-in-out infinite;">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-600"></div>
+    </div>
+
+    <script>
+        // --- GOOGLE FORM CONFIGURATION ---
+        // Replace these with your actual IDs to make it work!
+        const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/u/0/d/e/YOUR_FORM_ID/formResponse";
+        const EMAIL_ENTRY_ID = "entry.YOUR_ENTRY_ID";
+        window.submitted = false;
+        // ---------------------------------
+
+        function showSuccess() {
+            const form = document.getElementById('subscribe-form');
+            const successMsg = document.getElementById('success-message');
+            const premiumText = document.querySelector('#subscription-container > p');
+            
+            if (form) form.classList.add('hidden');
+            if (premiumText) premiumText.classList.add('hidden');
+            if (successMsg) successMsg.classList.remove('hidden');
+        }
+
+        // Update Year
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+        // Handle Subscription
+        const form = document.getElementById('subscribe-form');
+        const emailInput = document.getElementById('email-input');
+
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                const email = emailInput ? emailInput.value : '';
+                
+                if (email) {
+                    if (GOOGLE_FORM_ACTION.includes("YOUR_FORM_ID")) {
+                        // If placeholder is still there, just fake success for now
+                        e.preventDefault();
+                        showSuccess();
+                    } else {
+                        // Real submission via hidden iframe
+                        window.submitted = true;
+                        form.action = GOOGLE_FORM_ACTION;
+                        form.method = "POST";
+                        form.target = "hidden_iframe";
+                        emailInput.name = EMAIL_ENTRY_ID;
+                        // The form submits naturally to the iframe now
+                    }
+                }
+            });
+        }
+
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
