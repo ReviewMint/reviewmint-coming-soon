@@ -96,36 +96,36 @@
     <div class="fixed top-[10%] left-[5%] w-32 h-32 bg-purple-300/30 rounded-full blur-xl pointer-events-none"></div>
 
     <!-- Main Container Card -->
-    <main id="main-content" class="animate-fade-in-up relative z-20 w-full max-w-5xl aspect-[16/10] min-h-[600px] bg-white rounded-[40px] shadow-2xl shadow-blue-900/5 flex flex-col items-center justify-between py-12 px-8 overflow-hidden">
+    <main id="main-content" class="animate-fade-in-up relative z-20 w-full max-w-5xl md:aspect-[16/10] min-h-[500px] md:min-h-[600px] bg-white rounded-[32px] md:rounded-[40px] shadow-2xl shadow-blue-900/5 flex flex-col items-center justify-between py-12 px-5 md:px-8 overflow-hidden">
         
         <!-- Header / Logo Pod -->
-        <div class="absolute top-[-2px] left-1/2 -translate-x-1/2 z-30">
-            <div class="bg-white px-8 py-3 rounded-b-3xl shadow-[0_4px_20px_-2px_rgba(59,130,246,0.15)] border-x border-b border-gray-50 flex items-center gap-2">
-                <div class="bg-blue-600 p-1.5 rounded-full">
-                    <i data-lucide="link" class="text-white w-3.5 h-3.5"></i>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 z-30">
+            <div class="bg-white px-6 md:px-8 py-2 md:py-3 rounded-b-2xl md:rounded-b-3xl shadow-[0_4px_20px_-2px_rgba(59,130,246,0.15)] border-x border-b border-gray-50 flex items-center gap-2 whitespace-nowrap">
+                <div class="bg-blue-600 p-1 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-white w-3 h-3 md:w-3.5 md:h-3.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                 </div>
-                <span class="text-gray-800 tracking-tight font-bold text-xl">ReviewMint</span>
+                <span class="text-gray-800 tracking-tight font-bold text-lg md:text-xl">ReviewMint</span>
             </div>
         </div>
 
         <!-- Center Content -->
-        <div class="flex-1 flex flex-col items-center justify-center text-center space-y-6 max-w-2xl mt-12">
+        <div class="flex-1 flex flex-col items-center justify-center text-center space-y-4 md:space-y-6 w-full max-w-2xl mt-16 md:mt-12">
             <!-- 3D Emoji Alternative -->
-            <div class="text-6xl drop-shadow-xl animate-emoji mb-4">👍</div>
+            <div class="text-5xl md:text-6xl drop-shadow-xl animate-emoji mb-2 md:mb-4">👍</div>
 
-            <div class="space-y-3">
-                <p class="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">We're Almost There</p>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-blue-600 tracking-tight">Cooking Our Website.</h1>
+            <div class="space-y-2 md:space-y-3">
+                <p class="text-[9px] md:text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">We're Still</p>
+                <h1 class="text-3xl md:text-6xl font-extrabold text-blue-600 tracking-tight leading-tight">Cooking Our Website.</h1>
             </div>
 
             <div class="space-y-1">
-                <p class="text-gray-500 font-medium text-lg">Our team is putting the final touches on your next adventure companion.</p>
-                <p class="text-gray-500 font-medium text-lg">Stay Tune.</p>
+                <p class="text-gray-500 font-medium text-base md:text-lg px-4">We are going to launch our website Very Soon.</p>
+                <p class="text-gray-500 font-medium text-base md:text-lg">Stay Tune.</p>
             </div>
 
             <!-- Subscription Section -->
-            <div id="subscription-container" class="w-full max-w-sm pt-4 space-y-4">
-                <p class="text-xs text-blue-500/60 font-semibold tracking-wider uppercase mb-1 drop-shadow-sm">“Built by travelers, for travelers”</p>
+            <div id="subscription-container" class="w-full max-w-sm pt-4 space-y-4 px-2">
+                <p class="text-[10px] md:text-xs text-blue-500/60 font-semibold tracking-wider uppercase mb-1 drop-shadow-sm">Premium Updates Only</p>
                 
                 <form id="subscribe-form" class="relative group space-y-4">
                     <div class="flex flex-col sm:flex-row items-center gap-3">
@@ -135,18 +135,18 @@
                                 id="email-input"
                                 required
                                 placeholder="Enter your email"
-                                class="w-full bg-white/40 backdrop-blur-2xl border-2 border-gray-200/60 text-gray-800 rounded-full py-4 pl-14 pr-6 outline-none focus:ring-2 focus:ring-blue-400 focus:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all text-sm font-medium placeholder:text-gray-400"
+                                class="w-full bg-white/40 backdrop-blur-2xl border-2 border-gray-200/60 text-gray-800 rounded-full py-3.5 md:py-4 pl-12 md:pl-14 pr-6 outline-none focus:ring-2 focus:ring-blue-400 focus:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all text-sm font-medium placeholder:text-gray-400"
                             />
-                            <div class="absolute left-5 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-sm">
-                                <i data-lucide="mail" class="w-4 h-4 text-[#1c1c34]"></i>
+                            <div class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-sm flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 md:w-4 h-4 text-[#1c1c34]"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             </div>
                         </div>
                         <button
                             type="submit"
-                            class="w-full sm:w-auto bg-[#1c1c34] text-white px-8 py-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 btn-shadow whitespace-nowrap shadow-lg flex-shrink-0"
+                            class="w-full sm:w-auto bg-[#1c1c34] text-white px-8 py-3.5 md:py-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 btn-shadow whitespace-nowrap shadow-lg flex-shrink-0"
                         >
                             Notify Me
-                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"/></svg>
                         </button>
                     </div>
                     <p class="text-[10px] text-gray-400 font-medium italic opacity-70 mt-2">
@@ -164,13 +164,13 @@
         <div class="w-full flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-gray-100">
             <div class="flex items-center gap-4 order-2 md:order-1">
                 <button class="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-400 hover:text-blue-600 hover:scale-110 transition-all">
-                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                 </button>
                 <button class="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-400 hover:text-pink-600 hover:scale-110 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </button>
                 <button class="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-400 hover:text-blue-600 hover:scale-110 transition-all">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 </button>
             </div>
 
